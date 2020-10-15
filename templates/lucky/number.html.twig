@@ -1,0 +1,10 @@
+
+{% for course in courses %}
+    <h3>{{ course.titleCourse }}</h3>
+    <h3>{{ course.daysCourse }}</h3>
+
+    {% if time.year == course.intYear and time.mon == course.intMonth and time.mday < course.intDay %}
+    <h4>Le prochain cours aura lieu le lundi {{ course.intDay }} {{ myDay }} </h4>
+    {% endif %}
+{% endfor %}
+
